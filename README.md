@@ -1,10 +1,10 @@
 # Using the site
 
 ---
-* Install hugo in your system. Check below for steps.
+* Install hugo in your system. [Click here for steps](#installing-in-windows)
 * Copy git folder and place it in `HUGO` directory.
 * Run `cd hugo_sample`
-* Start the hugo server. Steps given below.
+* Start the hugo server. [Click here for steps](#start-the-hugo-server)
 
 
 
