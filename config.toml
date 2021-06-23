@@ -24,3 +24,9 @@ theme = "exampleTheme"
     pre = "tag"
     url = "/tags/"
     weight = 4
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true               #For running html codes in md file

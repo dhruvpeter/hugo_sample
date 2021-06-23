@@ -14,6 +14,17 @@
 
 ---
 Checkout https://gohugo.io/getting-started/quick-start/ for getting started.
+- [Installing in windows](#installing-in-windows)
+- [Installing in other OS](#installing-in-other-os)
+- [Creating a new site](#creating-a-new-site)
+- [Adding  a theme](#adding-a-theme)
+- [Adding some content](#adding-some-content)
+- [Start the Hugo server](#start-the-hugo-server)
+- [Getting example site from the theme](#getting-example-site-from-the-theme)  
+- [Creating a new theme](#creating-a-new-theme)
+- [Variables](#variables)
+- [Front Matter](#front-matter)
+- [Archetypes](#archetypes)
 ## Installing in windows
 * Goto https://github.com/gohugoio/hugo/releases.
 * Find the release for windows in the bottom of the page and download the zip file.
@@ -26,7 +37,7 @@ Checkout https://gohugo.io/getting-started/quick-start/ for getting started.
 ## Creating a new site
 * Run `hugo new site site-name` in the command prompt and a new folder named site-name will be created.
 
-## Adding  a theme
+## Adding a theme
 * First, download the theme from GitHub and add it to your site’s themes directory:
 * Sample code\
 `cd site-name`\
@@ -58,12 +69,31 @@ https://levelup.gitconnected.com/a-quick-tutorial-on-hugo-templates-creating-you
 * The basic syntax of go html template looks like this `{{ args }}`
 * Example of variable:\
   `{{ .Title }}` is used for accessing the title for this page.
-* Custom variables $ : Hugo also lets you create your own custom variables. Here you can store values to use in your layouts. To create a custom variable use the following notation:\
+* Variables $ : Hugo also lets you create your own custom variables. Here you can store values to use in your layouts. To create a custom variable use the following notation:\
 `{{ $myVar := value }}` : assigns value to $myVar\
 `{{ $myVar }}` : prints $myVar
+## Front Matter
+* Example:
   
+      ---
+      title: "My First Post"
+      date: 2021-06-22T15:15:38+05:30
+      tags: ["foo", "bar"]
+      ---
+* This is found in the starting of each md file.
+* It is just key:value pairs containing the details about that file.
+* Custom variables can be added here. Eg: `tags` is a variable.
+* Default language for front matter is YAML.
+
+## Archetypes
+* Control the default front matter created on creating md files.
 ## Notes
 * All the templates are placed inside the layout.
+* 2 types of content - List and Single
+* List - lists all the pages(md files)
+* Single - shows single page
+* Hugo creates list pages only for those directories in the root folder of content
+* To get a list page for particular directories, create a file `_index.md` in that directory
 
 
 
