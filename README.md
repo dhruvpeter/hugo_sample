@@ -25,6 +25,8 @@ Checkout https://gohugo.io/getting-started/quick-start/ for getting started.
 - [Variables](#variables)
 - [Front Matter](#front-matter)
 - [Archetypes](#archetypes)
+- [Shortcodes](#shortcodes)
+- [Creating custom shortcodes](#creating-custom-shortcodes)
 ## Installing in windows
 * Goto https://github.com/gohugoio/hugo/releases.
 * Find the release for windows in the bottom of the page and download the zip file.
@@ -87,6 +89,38 @@ https://levelup.gitconnected.com/a-quick-tutorial-on-hugo-templates-creating-you
 
 ## Archetypes
 * Control the default front matter created on creating md files.
+
+## Shortcodes
+* Shortcodes are simple snippets inside your content files calling built-in or custom templates.
+* Shortcodes are used to avoid writing raw html code in md files.
+* Syntax of shortcodes in md files: `{{< shortcode-name param1 >}}` .
+  Here `param1` is a parameter passed to the shortcode. 
+  These are single tag shortcodes.
+* We can also use two tags for calling shortcodes. 
+  
+      {{< shortcode-name >}} 
+      Some text
+      {{< /shortcode-name>}}
+* To send markdown text using two tags, use:
+  
+      {{% shortcode-name %}}
+      Stuff to `process` in the *center*.
+      {{% /shortcode-name %}}
+* A default shortcode available is for adding youtube videos to our site.
+  This can be done by `{{< youtube paramter >}}` where the parameter is a youtube video id,
+  for eg: `2xkNJL4gJ9E`
+* Visit https://gohugo.io/content-management/shortcodes/ for more details.  
+## Creating custom shortcodes
+* Create a new folder `shortcodes` in `layouts` folder.
+* Create an html file inside `shortcodes`. The name of file will be used
+  for calling the shortcode.
+* Create the needed template in the html file just created.
+* Call the shortcode in content file using `{{< shortcode-name >}}`
+* Variables can be passed to shortcode. 
+  They can be accessed using `{{.Get "var-name" }}` in the shortcode html file.
+* Parameters can also be accessed according to their position.
+  `{{ .Get 0 }}` can be used to access the first parameter passed.
+* To access the text written inside the shortcode tags, we can use `{{.Inner}}`.
 ## Notes
 * All the templates are placed inside the layout.
 * 2 types of content - List and Single
