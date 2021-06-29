@@ -27,6 +27,7 @@ Checkout https://gohugo.io/getting-started/quick-start/ for getting started.
 - [Archetypes](#archetypes)
 - [Shortcodes](#shortcodes)
 - [Creating custom shortcodes](#creating-custom-shortcodes)
+- [Data files](#data-files)
 ## Installing in windows
 * Goto https://github.com/gohugoio/hugo/releases.
 * Find the release for windows in the bottom of the page and download the zip file.
@@ -65,7 +66,8 @@ Checkout https://gohugo.io/getting-started/quick-start/ for getting started.
 Refer https://retrolog.io/blog/creating-a-hugo-theme-from-scratch/ \
 OR
 https://levelup.gitconnected.com/a-quick-tutorial-on-hugo-templates-creating-your-theme-a4102b42a85f
-
+OR
+https://www.zeolearn.com/magazine/develop-a-theme-for-hugo
 ## Variables
 * Variables can only be used inside templates and layouts, not inside content.
 * The basic syntax of go html template looks like this `{{ args }}`
@@ -121,6 +123,13 @@ https://levelup.gitconnected.com/a-quick-tutorial-on-hugo-templates-creating-you
 * Parameters can also be accessed according to their position.
   `{{ .Get 0 }}` can be used to access the first parameter passed.
 * To access the text written inside the shortcode tags, we can use `{{.Inner}}`.
+
+## Data files
+* Relevant read: https://discourse.gohugo.io/t/solved-how-to-pass-name-of-data-file-or-table-to-a-shortcode/4961
+* Hugo supports loading data from YAML, JSON, and TOML files located in the data directory in the root of your Hugo project.
+* The data will be accessible as a `map` in the `.Site.Data` variable.
+* For eg: `data/jazz/bass/jacopastorius.toml` can be accessed using `.Site.Data.jazz.bass.jacopastorius`
+
 ## Notes
 * All the templates are placed inside the layout.
 * 2 types of content - List and Single
