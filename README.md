@@ -1,3 +1,8 @@
+# About the project
+
+---
+This is a sample project made from Hugo framework.
+
 # Using the site
 
 ---
