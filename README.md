@@ -130,6 +130,8 @@ https://www.zeolearn.com/magazine/develop-a-theme-for-hugo
 * The data will be accessible as a `map` in the `.Site.Data` variable.
 * For eg: `data/jazz/bass/jacopastorius.toml` can be accessed using `.Site.Data.jazz.bass.jacopastorius`
 
+## Content Organization
+* Read https://gohugo.io/content-management/organization/
 ## Notes
 * All the templates are placed inside the layout.
 * 2 types of content - List and Single
