@@ -8,22 +8,22 @@ publishDir = "docs"
   [[menu.main]]
     name = "Home"
     pre = "home"
-    url = "/hugo-sample"
+    url = "/hugo_sample"
     weight = 1
   [[menu.main]]
     name = "Posts"
     pre = "pen-tool"
-    url = "/hugo-sample/posts/"
+    url = "/hugo_sample/posts/"
     weight = 2
   [[menu.main]]
     name = "Blogs"
     pre = "pen-tool"
-    url = "/hugo-sample/blogs/"
+    url = "/hugo_sample/blogs/"
     weight = 3
   [[menu.main]]
     name = "Tags"
     pre = "tag"
-    url = "/hugo-sample/tags/"
+    url = "/hugo_sample/tags/"
     weight = 4
 
 
